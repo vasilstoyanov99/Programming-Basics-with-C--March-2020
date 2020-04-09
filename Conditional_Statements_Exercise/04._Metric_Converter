@@ -1,0 +1,50 @@
+using System;
+
+namespace _04._Metric_Converter
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double Num = double.Parse(Console.ReadLine());
+            string InputMetric = Console.ReadLine().ToLower();
+            string WantedMetric = Console.ReadLine().ToLower();
+            double Result = 0.0;
+
+            if(InputMetric == "mm")
+            {
+                if(WantedMetric == "m")
+                {
+                    Result += Num / 1000;
+                }
+                else if(WantedMetric == "cm")
+                {
+                    Result += Num / 10;
+                }
+            }
+          else if (InputMetric == "cm")
+            {
+                if (WantedMetric == "m")
+                {
+                    Result += Num / 100;
+                }
+                else if (WantedMetric == "mm")
+                {
+                    Result += Num * 10;
+                }
+            }
+            else if (InputMetric == "m")
+            {
+                if (WantedMetric == "cm")
+                {
+                    Result += Num * 100;
+                }
+                else if (WantedMetric == "mm")
+                {
+                    Result += Num * 1000;
+                }
+            }
+            Console.WriteLine($"{Result:f3}");
+        }
+    }
+}
