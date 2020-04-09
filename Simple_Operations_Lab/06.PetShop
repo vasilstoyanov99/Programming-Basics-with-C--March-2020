@@ -1,0 +1,17 @@
+using System;
+
+namespace _06.PetShop
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double dogs = double.Parse(Console.ReadLine());
+            double others = double.Parse(Console.ReadLine());
+
+            double total = (dogs * 2.5) + (others * 4 );
+
+            Console.WriteLine($"{total:f2}" + " lv.");
+        }
+    }
+}
