@@ -2,7 +2,7 @@ using System;
 
 namespace GreetingByName
 {
-    class GreetingByName
+    class 01.Greeting_By_Name
     {
         static void Main(string[] args)
         {
