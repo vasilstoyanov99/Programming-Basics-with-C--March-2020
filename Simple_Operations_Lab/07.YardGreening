@@ -1,0 +1,19 @@
+using System;
+
+namespace _07.YardGreening
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double CubMeters = double.Parse(Console.ReadLine());
+
+            double TotalNoDis = CubMeters * 7.61;
+            double Dis = TotalNoDis * 0.18;
+            double TotalWithDis = TotalNoDis - Dis;
+
+            Console.WriteLine($"The final price is: {TotalWithDis:f2} lv.");
+            Console.WriteLine($"The discount is: {Dis:f2} lv.");
+        }
+    }
+}
