@@ -1,0 +1,18 @@
+using System;
+
+namespace _02.ConcatenateData
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string FName = Console.ReadLine();
+            string Lname = Console.ReadLine();
+            int age = int.Parse(Console.ReadLine());
+            string town = Console.ReadLine();
+
+            Console.WriteLine($"You are {FName} {Lname}, a {age}-years old person from {town}.");
+
+        }
+    }
+}
