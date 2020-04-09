@@ -1,0 +1,22 @@
+using System;
+
+namespace _08.FishTank
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double a = double.Parse(Console.ReadLine());
+            double b = double.Parse(Console.ReadLine());
+            double c = double.Parse(Console.ReadLine());
+            double percent = double.Parse(Console.ReadLine());
+
+            double Volume = a * b * c;
+            double VolumeLiters = Volume * 0.001;
+            double PartFull = (VolumeLiters * percent) / 100;
+            double Left = VolumeLiters - PartFull;
+
+            Console.WriteLine($"{Left:f3}");
+        }
+    }
+}
