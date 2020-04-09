@@ -1,6 +1,6 @@
 using System;
 
-namespace _02.ConcatenateData
+namespace _02.Concatenate_Data
 {
     class Program
     {
