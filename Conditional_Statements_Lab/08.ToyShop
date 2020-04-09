@@ -1,0 +1,37 @@
+using System;
+
+namespace _08.ToyShop
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double HolidayPrice = double.Parse(Console.ReadLine());
+            int Puzzels = int.Parse(Console.ReadLine());
+            int Dolls = int.Parse(Console.ReadLine());
+            int TeddyBears = int.Parse(Console.ReadLine());
+            int Minions = int.Parse(Console.ReadLine());
+            int Trucks = int.Parse(Console.ReadLine());
+
+            double TotalPrice = (Puzzels * 2.60) + (Dolls * 3.0) + (TeddyBears * 4.10) + (Minions * 8.20) + (Trucks * 2.0);
+            int TotalToys = Puzzels + Dolls + TeddyBears + Minions + Trucks;
+            if (TotalToys >= 50)
+            {
+                double Check = TotalPrice * 0.25;
+                TotalPrice -= Check;
+            }
+            double Tax = TotalPrice * 0.10;
+            TotalPrice -= Tax;
+            if(TotalPrice >= HolidayPrice)
+            {
+                double LeftMoney = TotalPrice - HolidayPrice;
+                Console.WriteLine($"Yes! {LeftMoney:f2} lv left.");
+            }
+            else if(TotalPrice < HolidayPrice)
+            {
+                double NeededMoney = HolidayPrice - TotalPrice;
+                Console.WriteLine($"Not enough money! { NeededMoney:f2} lv needed.");
+            }
+        }
+    }
+}
